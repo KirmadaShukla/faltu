@@ -3,8 +3,8 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-6xl mx-auto px-4 py-12 editable" contenteditable="true" draggable="true" style={{ outline: 'rgb(33, 150, 243) dashed 1px' }}>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 editable" contenteditable="true" draggable="true" style={{ outline: 'rgb(33, 150, 243) dashed 1px' }}>
+      <div className="max-w-6xl mx-auto px-4 py-12 editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
           <div className="col-span-1 md:col-span-2 editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
             <h2 className="text-2xl font-bold mb-4 editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
               Your Brand
@@ -38,7 +38,7 @@ const Footer = () => {
             </div>
             <div className="drag-handle">⋮⋮</div>
           </div>
-          <div className="editable" contenteditable="true" draggable="true" style={{ outline: 'rgb(33, 150, 243) dashed 1px' }}>
+          <div className="editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
             <h3 className="text-lg font-semibold mb-4 editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
               Company
               <div className="drag-handle">⋮⋮</div>
@@ -56,7 +56,7 @@ const Footer = () => {
                   Careers
                   <div className="drag-handle">⋮⋮</div>
                 </a>
-                <div className="drag-handle">⋮⋮</div>
+                <div className="drag-handle">⋮⋮as</div>
               </li>
               <li className="editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
                 <a className="text-gray-400 hover:text-white transition-colors duration-300 editable" href="/contact" data-discover="true" contenteditable="true" draggable="true">
@@ -71,19 +71,19 @@ const Footer = () => {
               <span style={{ fontSize: '18px', fontWeight: '600', backgroundColor: 'oklch(0.21 0.034 264.665)', color: 'rgb(255, 255, 255)' }}>Resources</span>
             </div>
           </div>
-          <div className="editable" contenteditable="true" draggable="true">
-            <h3 className="text-lg font-semibold mb-4 editable" contenteditable="true" draggable="true">
+          <div className="editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
+            <h3 className="text-lg font-semibold mb-4 editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
               <div className="drag-handle">⋮⋮</div>
             </h3>
             <ul className="space-y-2">
-              <li className="editable" contenteditable="true" draggable="true">
+              <li className="editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
                 <a className="text-gray-400 hover:text-white transition-colors duration-300 editable" href="/blog" data-discover="true" contenteditable="true" draggable="true">
                   Blog
                   <div className="drag-handle">⋮⋮</div>
                 </a>
                 <div className="drag-handle">⋮⋮</div>
               </li>
-              <li className="editable" contenteditable="true" draggable="true">
+              <li className="editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
                 <a className="text-gray-400 hover:text-white transition-colors duration-300 editable" href="/documentation" data-discover="true" contenteditable="true" draggable="true">
                   Documentation
                   <div className="drag-handle">⋮⋮</div>
@@ -132,7 +132,7 @@ const Footer = () => {
           </div>
           <div className="drag-handle">⋮⋮</div>
         </div>
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400 editable" contenteditable="true" draggable="true">
+        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400 editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
           <p className="editable" contenteditable="true" draggable="true">
             © 2025 Your Brand. All rights reserved.
             <div className="drag-handle">⋮⋮</div>
