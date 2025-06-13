@@ -1,27 +1,32 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { FaChartLine } from 'react-icons/fa';
 
-const DataCard = ({ title, description, icon: Icon, onClick }) => {
+const DataCard = () => {
   return (
-    <div
-      className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 cursor-pointer"
-      onClick={onClick}
-      data-component="data-card"
-    >
-      <div className="flex items-center mb-4" data-component="data-card-header">
-        {Icon && <Icon className="text-blue-500 text-2xl mr-3" data-component="data-card-icon" />}
-        <h3 className="text-xl font-semibold text-gray-800" data-component="data-card-title">{title}</h3>
+    <div className="bg-white rounded-xl shadow-lg p-8" data-source="src/data/DataCard.jsx">
+      <div className="flex items-center mb-6">
+        <FaChartLine className="text-blue-500 text-3xl mr-4" />
+        <h3 className="text-2xl font-semibold">Data Analytics</h3>
       </div>
-      <p className="text-gray-600" data-component="data-card-description">{description}</p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="bg-gray-50 p-6 rounded-lg">
+          <h4 className="text-lg font-medium mb-2">Total Users</h4>
+          <p className="text-3xl font-bold text-blue-500">1,234</p>
+          <p className="text-sm text-gray-500 mt-2">+12% from last month</p>
+        </div>
+        <div className="bg-gray-50 p-6 rounded-lg">
+          <h4 className="text-lg font-medium mb-2">Revenue</h4>
+          <p className="text-3xl font-bold text-green-500">$45,678</p>
+          <p className="text-sm text-gray-500 mt-2">+8% from last month</p>
+        </div>
+        <div className="bg-gray-50 p-6 rounded-lg">
+          <h4 className="text-lg font-medium mb-2">Active Projects</h4>
+          <p className="text-3xl font-bold text-purple-500">42</p>
+          <p className="text-sm text-gray-500 mt-2">+5% from last month</p>
+        </div>
+      </div>
     </div>
   );
-};
-
-DataCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  icon: PropTypes.elementType,
-  onClick: PropTypes.func,
 };
 
 export default DataCard; 
