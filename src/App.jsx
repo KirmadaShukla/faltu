@@ -1,29 +1,40 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react';
+import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import './App.css';
+import Navigation from './components/Navigation';
+
+const containerStyles = css`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
+
+const mainStyles = css`
+  flex: 1;
+  padding: 20px;
+`;
 
 function App() {
+  const [showNavigation, setShowNavigation] = useState(true);
+
   return (
-    <Router>
-      <div className="App">
-        <header className="bg-gray-800 p-4">
-          <a className="text-2xl font-bold text-gray-900" href="/">Your Brand</a> {/* Updated line */}
-        </header>
-        <main>
+    <div css={containerStyles}>
+      <BrowserRouter>
+        {showNavigation && <Navigation />}
+        <main css={mainStyles}>
+          <a className="text-2xl font-bold text-gray-900">Your Brand</a> {/* Added link here */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
-        <footer className="bg-gray-800 p-4 text-center text-gray-400">
-          &copy; {new Date().getFullYear()} Your Brand
-        </footer>
-      </div>
-    </Router>
+      </BrowserRouter>
+    </div>
   );
 }
 
