@@ -6,41 +6,35 @@ import Nav from '../components/Nav';
 const MainLayout = ({ children }) => {
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="bg-white shadow-sm editable" data-source="src/Components/Header.jsx" contentEditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
-        <div className="max-w-6xl mx-auto px-4 editable" contentEditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
-          <div className="flex justify-between items-center h-16 editable" contentEditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
-            <a className="text-2xl font-bold text-gray-900 editable" href="/" data-discover="true" contentEditable="true" draggable="true">Your Brand<div className="drag-handle">⋮⋮</div></a>
-            <nav className="flex space-x-6 editable" data-source="src/components/Nav.jsx" contentEditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
-              <a className="flex items-center text-gray-600 hover:text-gray-900 transition-colors duration-300 editable" href="/" data-discover="true" contentEditable="true" draggable="true">
-                <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 576 512" className="mr-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path>
-                </svg>Home<div className="drag-handle">⋮⋮</div>
-              </a>
-              <a className="flex items-center text-gray-600 hover:text-gray-900 transition-colors duration-300 editable" href="/about" data-discover="true" contentEditable="true" draggable="true">
-                <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" className="mr-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path>
-                </svg>About<div className="drag-handle">⋮⋮</div>
-              </a>
-              <a className="flex items-center text-gray-600 hover:text-gray-900 transition-colors duration-300 editable" href="/contact" data-discover="true" contentEditable="true" draggable="true">
-                <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" className="mr-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path>
-                </svg>Contact<div className="drag-handle">⋮⋮</div>
-              </a>
+      <header className="bg-white shadow-sm editable" data-source="src/Components/Header.jsx" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
+        <div className="max-w-6xl mx-auto px-4 editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
+          <div className="flex justify-between items-center h-16 editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
+            <a className="text-2xl font-bold text-gray-900 editable" href="/" data-discover="true" contenteditable="true" draggable="true">
+              Your Brand
               <div className="drag-handle">⋮⋮</div>
-            </nav>
+            </a>
+            <Nav />
             <div className="drag-handle">⋮⋮</div>
           </div>
           <div className="drag-handle">⋮⋮</div>
         </div>
         <div className="drag-handle">⋮⋮</div>
       </header>
-      <main className="flex-grow">{children}</main>
-      <footer className="bg-gray-900 text-white editable" data-source="src/Components/Footer.jsx" contentEditable="true" draggable="true" style={{ outline: 'rgb(33, 150, 243) dashed 1px' }}>
-        <div className="max-w-6xl mx-auto px-4 py-12 editable" contentEditable="true" draggable="true" style={{ outline: 'rgb(33, 150, 243) dashed 1px' }}>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 editable" contentEditable="true" draggable="true" style={{ outline: 'rgb(33, 150, 243) dashed 1px' }}>
-            <div className="col-span-1 md:col-span-2 editable" contentEditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
-              <h2 className="text-2xl font-bold mb-4 editable" contentEditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>Your Brand<div className="drag-handle">⋮⋮</div></h2>
-              <p className="text-gray-400 mb-4 editable" contentEditable="true" draggable="true">Empowering businesses with innovative solutions for the digital age.<div className="drag-handle">⋮⋮</div></p>
+      <main className="flex-grow">
+        {children}
+      </main>
+      <footer className="bg-gray-900 text-white editable" data-source="src/Components/Footer.jsx" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
+        <div className="max-w-6xl mx-auto px-4 py-12 editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
+            <div className="col-span-1 md:col-span-2 editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
+              <h2 className="text-2xl font-bold mb-4 editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
+                Your Brand
+                <div className="drag-handle">⋮⋮</div>
+              </h2>
+              <p className="text-gray-400 mb-4 editable" contenteditable="true" draggable="true">
+                Empowering businesses with innovative solutions for the digital age.
+                <div className="drag-handle">⋮⋮</div>
+              </p>
               <div className="flex space-x-4">
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Facebook">
                   <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" className="text-xl" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
@@ -65,19 +59,31 @@ const MainLayout = ({ children }) => {
               </div>
               <div className="drag-handle">⋮⋮</div>
             </div>
-            <div className="editable" contentEditable="true" draggable="true" style={{ outline: 'rgb(33, 150, 243) dashed 1px' }}>
-              <h3 className="text-lg font-semibold mb-4 editable" contentEditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>Company<div className="drag-handle">⋮⋮</div></h3>
+            <div className="editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
+              <h3 className="text-lg font-semibold mb-4 editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
+                Company
+                <div className="drag-handle">⋮⋮</div>
+              </h3>
               <ul className="space-y-2">
-                <li className="editable" contentEditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
-                  <a className="text-gray-400 hover:text-white transition-colors duration-300 editable" href="/about" data-discover="true" contentEditable="true" draggable="true">About<div className="drag-handle">⋮⋮</div></a>
+                <li className="editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
+                  <a className="text-gray-400 hover:text-white transition-colors duration-300 editable" href="/about" data-discover="true" contenteditable="true" draggable="true">
+                    About
+                    <div className="drag-handle">⋮⋮</div>
+                  </a>
                   <div className="drag-handle">⋮⋮</div>
                 </li>
-                <li className="editable" contentEditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
-                  <a className="text-gray-400 hover:text-white transition-colors duration-300 editable" href="/careers" data-discover="true" contentEditable="true" draggable="true">Careers<div className="drag-handle">⋮⋮</div></a>
-                  <div className="drag-handle">⋮⋮</div>
+                <li className="editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
+                  <a className="text-gray-400 hover:text-white transition-colors duration-300 editable" href="/careers" data-discover="true" contenteditable="true" draggable="true">
+                    Careers
+                    <div className="drag-handle">⋮⋮</div>
+                  </a>
+                  <div className="drag-handle">⋮⋮as</div>
                 </li>
-                <li className="editable" contentEditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
-                  <a className="text-gray-400 hover:text-white transition-colors duration-300 editable" href="/contact" data-discover="true" contentEditable="true" draggable="true">Contact<div className="drag-handle">⋮⋮</div></a>
+                <li className="editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
+                  <a className="text-gray-400 hover:text-white transition-colors duration-300 editable" href="/contact" data-discover="true" contenteditable="true" draggable="true">
+                    Contact
+                    <div className="drag-handle">⋮⋮</div>
+                  </a>
                   <div className="drag-handle">⋮⋮</div>
                 </li>
               </ul>
@@ -86,39 +92,57 @@ const MainLayout = ({ children }) => {
                 <span style={{ fontSize: '18px', fontWeight: '600', backgroundColor: 'oklch(0.21 0.034 264.665)', color: 'rgb(255, 255, 255)' }}>Resources</span>
               </div>
             </div>
-            <div className="editable" contentEditable="true" draggable="true">
-              <h3 className="text-lg font-semibold mb-4 editable" contentEditable="true" draggable="true">
+            <div className="editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
+              <h3 className="text-lg font-semibold mb-4 editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
                 <div className="drag-handle">⋮⋮</div>
               </h3>
               <ul className="space-y-2">
-                <li className="editable" contentEditable="true" draggable="true">
-                  <a className="text-gray-400 hover:text-white transition-colors duration-300 editable" href="/blog" data-discover="true" contentEditable="true" draggable="true">Blog<div className="drag-handle">⋮⋮</div></a>
+                <li className="editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
+                  <a className="text-gray-400 hover:text-white transition-colors duration-300 editable" href="/blog" data-discover="true" contenteditable="true" draggable="true">
+                    Blog
+                    <div className="drag-handle">⋮⋮</div>
+                  </a>
                   <div className="drag-handle">⋮⋮</div>
                 </li>
-                <li className="editable" contentEditable="true" draggable="true">
-                  <a className="text-gray-400 hover:text-white transition-colors duration-300 editable" href="/documentation" data-discover="true" contentEditable="true" draggable="true">Documentation<div className="drag-handle">⋮⋮</div></a>
+                <li className="editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
+                  <a className="text-gray-400 hover:text-white transition-colors duration-300 editable" href="/documentation" data-discover="true" contenteditable="true" draggable="true">
+                    Documentation
+                    <div className="drag-handle">⋮⋮</div>
+                  </a>
                   <div className="drag-handle">⋮⋮</div>
                 </li>
-                <li className="editable" contentEditable="true" draggable="true">
-                  <a className="text-gray-400 hover:text-white transition-colors duration-300 editable" href="/support" data-discover="true" contentEditable="true" draggable="true">Support<div className="drag-handle">⋮⋮</div></a>
+                <li className="editable" contenteditable="true" draggable="true">
+                  <a className="text-gray-400 hover:text-white transition-colors duration-300 editable" href="/support" data-discover="true" contenteditable="true" draggable="true">
+                    Support
+                    <div className="drag-handle">⋮⋮</div>
+                  </a>
                   <div className="drag-handle">⋮⋮</div>
                 </li>
               </ul>
               <div className="drag-handle">⋮⋮</div>
             </div>
-            <div className="editable" contentEditable="true" draggable="true">
-              <h3 className="text-lg font-semibold mb-4 editable" contentEditable="true" draggable="true">Legal<div className="drag-handle">⋮⋮</div></h3>
+            <div className="editable" contenteditable="true" draggable="true">
+              <h3 className="text-lg font-semibold mb-4 editable" contenteditable="true" draggable="true">Legal<div className="drag-handle">⋮⋮</div></h3>
               <ul className="space-y-2">
-                <li className="editable" contentEditable="true" draggable="true">
-                  <a className="text-gray-400 hover:text-white transition-colors duration-300 editable" href="/privacy" data-discover="true" contentEditable="true" draggable="true">Privacy<div className="drag-handle">⋮⋮</div></a>
+                <li className="editable" contenteditable="true" draggable="true">
+                  <a className="text-gray-400 hover:text-white transition-colors duration-300 editable" href="/privacy" data-discover="true" contenteditable="true" draggable="true">
+                    Privacy
+                    <div className="drag-handle">⋮⋮</div>
+                  </a>
                   <div className="drag-handle">⋮⋮</div>
                 </li>
-                <li className="editable" contentEditable="true" draggable="true">
-                  <a className="text-gray-400 hover:text-white transition-colors duration-300 editable" href="/terms" data-discover="true" contentEditable="true" draggable="true">Terms<div className="drag-handle">⋮⋮</div></a>
+                <li className="editable" contenteditable="true" draggable="true">
+                  <a className="text-gray-400 hover:text-white transition-colors duration-300 editable" href="/terms" data-discover="true" contenteditable="true" draggable="true">
+                    Terms
+                    <div className="drag-handle">⋮⋮</div>
+                  </a>
                   <div className="drag-handle">⋮⋮</div>
                 </li>
-                <li className="editable" contentEditable="true" draggable="true">
-                  <a className="text-gray-400 hover:text-white transition-colors duration-300 editable" href="/security" data-discover="true" contentEditable="true" draggable="true">Security<div className="drag-handle">⋮⋮</div></a>
+                <li className="editable" contenteditable="true" draggable="true">
+                  <a className="text-gray-400 hover:text-white transition-colors duration-300 editable" href="/security" data-discover="true" contenteditable="true" draggable="true">
+                    Security
+                    <div className="drag-handle">⋮⋮</div>
+                  </a>
                   <div className="drag-handle">⋮⋮</div>
                 </li>
               </ul>
@@ -126,8 +150,11 @@ const MainLayout = ({ children }) => {
             </div>
             <div className="drag-handle">⋮⋮</div>
           </div>
-          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400 editable" contentEditable="true" draggable="true">
-            <p className="editable" contentEditable="true" draggable="true">© 2025 Your Brand. All rights reserved.<div className="drag-handle">⋮⋮</div></p>
+          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400 editable" contenteditable="true" draggable="true" style={{ outline: 'transparent dashed 1px' }}>
+            <p className="editable" contenteditable="true" draggable="true">
+              © 2025 Your Brand. All rights reserved.
+              <div className="drag-handle">⋮⋮</div>
+            </p>
             <div className="drag-handle">⋮⋮</div>
           </div>
           <div className="drag-handle">⋮⋮</div>
