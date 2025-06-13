@@ -45,28 +45,29 @@ const Contact = () => {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+    <div className="max-w-6xl mx-auto px-4 py-12" data-component="contact-page">
+      <div className="text-center mb-16" data-component="contact-hero">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6" data-component="contact-title">
           Contact Us
         </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-component="contact-description">
           Have questions? We'd love to hear from you. Send us a message and we'll
           respond as soon as possible.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12" data-component="contact-content">
         {/* Contact Form */}
-        <div className="bg-white rounded-xl shadow-lg p-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+        <div className="bg-white rounded-xl shadow-lg p-8" data-component="contact-form-container">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-6" data-component="contact-form-title">
             Send us a Message
           </h2>
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
+          <form onSubmit={handleSubmit} className="space-y-6" data-component="contact-form">
+            <div data-component="contact-form-field">
               <label
                 htmlFor="name"
                 className="block text-sm font-medium text-gray-700 mb-1"
+                data-component="contact-form-label"
               >
                 Name
               </label>
@@ -78,12 +79,14 @@ const Contact = () => {
                 onChange={handleChange}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 required
+                data-component="contact-form-input"
               />
             </div>
-            <div>
+            <div data-component="contact-form-field">
               <label
                 htmlFor="email"
                 className="block text-sm font-medium text-gray-700 mb-1"
+                data-component="contact-form-label"
               >
                 Email
               </label>
@@ -95,12 +98,14 @@ const Contact = () => {
                 onChange={handleChange}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 required
+                data-component="contact-form-input"
               />
             </div>
-            <div>
+            <div data-component="contact-form-field">
               <label
                 htmlFor="subject"
                 className="block text-sm font-medium text-gray-700 mb-1"
+                data-component="contact-form-label"
               >
                 Subject
               </label>
@@ -112,12 +117,14 @@ const Contact = () => {
                 onChange={handleChange}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 required
+                data-component="contact-form-input"
               />
             </div>
-            <div>
+            <div data-component="contact-form-field">
               <label
                 htmlFor="message"
                 className="block text-sm font-medium text-gray-700 mb-1"
+                data-component="contact-form-label"
               >
                 Message
               </label>
@@ -129,11 +136,13 @@ const Contact = () => {
                 rows="4"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 required
+                data-component="contact-form-textarea"
               ></textarea>
             </div>
             <button
               type="submit"
               className="w-full bg-blue-500 text-white py-3 px-6 rounded-lg hover:bg-blue-600 transition-colors duration-300"
+              data-component="contact-form-submit"
             >
               Send Message
             </button>
@@ -141,12 +150,12 @@ const Contact = () => {
         </div>
 
         {/* Contact Information */}
-        <div className="space-y-8">
-          <div className="bg-white rounded-xl shadow-lg p-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+        <div className="space-y-8" data-component="contact-info">
+          <div className="bg-white rounded-xl shadow-lg p-8" data-component="contact-info-container">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6" data-component="contact-info-title">
               Contact Information
             </h2>
-            <div className="space-y-6">
+            <div className="space-y-6" data-component="contact-info-list">
               {contactInfo.map((info, index) => (
                 <a
                   key={index}
@@ -154,11 +163,14 @@ const Contact = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-50 transition-colors duration-300"
+                  data-component="contact-info-item"
                 >
-                  <info.icon className="text-blue-500 text-xl mt-1" />
-                  <div>
-                    <h3 className="font-medium text-gray-900">{info.title}</h3>
-                    <p className="text-gray-600">{info.content}</p>
+                  <info.icon className="text-blue-500 text-xl mt-1" data-component="contact-info-icon" />
+                  <div data-component="contact-info-content">
+                    <h3 className="font-medium text-gray-900" data-component="contact-info-title">
+                      {info.title}
+                    </h3>
+                    <p className="text-gray-600" data-component="contact-info-text">{info.content}</p>
                   </div>
                 </a>
               ))}
@@ -166,13 +178,12 @@ const Contact = () => {
           </div>
 
           {/* Map Placeholder */}
-          <div className="bg-white rounded-xl shadow-lg p-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+          <div className="bg-white rounded-xl shadow-lg p-8" data-component="contact-map-container">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6" data-component="contact-map-title">
               Location
             </h2>
-            <div className="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg">
-              {/* Add your map component here */}
-              <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
+            <div className="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg" data-component="contact-map">
+              <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center" data-component="contact-map-placeholder">
                 <p className="text-gray-500">Map will be displayed here</p>
               </div>
             </div>

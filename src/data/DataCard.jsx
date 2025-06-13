@@ -6,12 +6,13 @@ const DataCard = ({ title, description, icon: Icon, onClick }) => {
     <div
       className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 cursor-pointer"
       onClick={onClick}
+      data-component="data-card"
     >
-      <div className="flex items-center mb-4">
-        {Icon && <Icon className="text-blue-500 text-2xl mr-3" />}
-        <h3 className="text-xl font-semibold text-gray-800">{title}</h3>
+      <div className="flex items-center mb-4" data-component="data-card-header">
+        {Icon && <Icon className="text-blue-500 text-2xl mr-3" data-component="data-card-icon" />}
+        <h3 className="text-xl font-semibold text-gray-800" data-component="data-card-title">{title}</h3>
       </div>
-      <p className="text-gray-600">{description}</p>
+      <p className="text-gray-600" data-component="data-card-description">{description}</p>
     </div>
   );
 };
